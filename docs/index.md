@@ -1,25 +1,70 @@
 ---
-hide:
-  - toc
+hide: [navigation, toc]
 ---
 
-# Producción electrónica
+<div class="hero" markdown="1">
 
-<div class="hero-panel">
-  <p class="eyebrow">PORTAFOLIO · INGENIERÍA ELECTRÓNICA</p>
-  <h1>Del diseño al prototipo</h1>
-  <p class="hero-copy">Bitácora de herramientas, procesos y aprendizajes para diseñar, simular y fabricar sistemas electrónicos.</p>
-  <a class="hero-action" href="Primeros%20pasos%20Kicad/">Explorar las guías <span aria-hidden="true">→</span></a>
+<p class="eyebrow">PRODUCCIÓN ELECTRÓNICA · PORTAFOLIO</p>
+
+# Del diseño al prototipo
+
+Herramientas, procesos y aprendizajes para diseñar, simular y fabricar sistemas electrónicos.
+{ .hero-copy }
+
+[Explorar las guías :material-arrow-down:](#guias){ .md-button .md-button--primary }
+[Conocer al equipo](Equipo%20de%20trabajo.md){ .md-button }
+
+<p class="hero-caption">Diseño de PCB &nbsp; / &nbsp; Manufactura digital &nbsp; / &nbsp; Simulación</p>
+
 </div>
 
-## Recorrido del proyecto
+## Un proceso. Cuatro herramientas. {#guias}
 
-<div class="journey-grid">
-  <a class="journey-card" href="Equipo de trabajo.md"><span class="card-icon" aria-hidden="true"><i class="fa-solid fa-users"></i></span><span class="card-step">01 · EQUIPO</span><strong>Quiénes somos</strong><span>Conoce al equipo detrás del portafolio.</span></a>
-  <a class="journey-card" href="Primeros%20pasos%20Kicad/"><span class="card-icon" aria-hidden="true"><i class="fa-solid fa-microchip"></i></span><span class="card-step">02 · DISEÑO</span><strong>KiCad</strong><span>Del esquemático a la placa electrónica.</span></a>
-  <a class="journey-card" href="Mods CE.md"><span class="card-icon" aria-hidden="true"><i class="fa-solid fa-bezier-curve"></i></span><span class="card-step">03 · FABRICACIÓN</span><strong>Mods CE</strong><span>Prepara trayectorias de SVG a RML.</span></a>
-  <a class="journey-card" href="Roland MonoFab.md"><span class="card-icon" aria-hidden="true"><i class="fa-solid fa-gears"></i></span><span class="card-step">04 · MAQUINADO</span><strong>Roland MonoFab</strong><span>Configura y opera la fresadora SRM-20.</span></a>
-  <a class="journey-card" href="Doc Multisim.md"><span class="card-icon" aria-hidden="true"><i class="fa-solid fa-wave-square"></i></span><span class="card-step">05 · SIMULACIÓN</span><strong>NI Multisim</strong><span>Analiza circuitos digitales y analógicos.</span></a>
+Documentación de los aprendizajes y proyectos realizados durante el semestre en la materia de Producción Electrónica.
+{ .section-intro }
+
+<div class="grid cards landing-cards" markdown="1">
+
+-   :material-chip:{ .card-icon } **Diseño de PCB**
+
+    ---
+
+    Del esquemático a la placa. Componentes, conexiones, verificación y archivos de fabricación.
+
+    [Abrir KiCad :material-arrow-right:](Primeros%20pasos%20Kicad.md)
+
+-   :material-vector-polyline:{ .card-icon } **Preparación CAM**
+
+    ---
+
+    Del archivo SVG a las trayectorias RML. Herramientas, orígenes y parámetros de maquinado.
+
+    [Abrir Mods CE :material-arrow-right:](Mods%20CE.md)
+
+-   :material-cog-outline:{ .card-icon } **Fabricación CNC**
+
+    ---
+
+    Operación de la Roland MonoFab SRM-20. Calibración, mecanizado y evidencia del proceso.
+
+    [Abrir MonoFab :material-arrow-right:](Roland%20MonoFab.md)
+
+-   :material-sine-wave:{ .card-icon } **Simulación de circuitos**
+
+    ---
+
+    Lógica digital, análisis de circuitos e instrumentación virtual en un mismo entorno.
+
+    [Abrir Multisim :material-arrow-right:](Doc%20Multisim.md)
+
 </div>
 
-<div class="portal-note"><span aria-hidden="true">⌁</span> Una guía práctica del proceso de producción electrónica: diseño, validación y manufactura.</div>
+<div class="team-callout" markdown="1">
+
+:material-account-group-outline: **Las personas detrás del proyecto**
+
+Conoce al equipo y su recorrido en Producción Electrónica.
+
+[Ver equipo :material-arrow-right:](Equipo%20de%20trabajo.md){ .md-button }
+
+</div>

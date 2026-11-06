@@ -1,50 +1,68 @@
 site_name: Producción Electrónica
 site_description: Portafolio de diseño, simulación y fabricación electrónica
+site_url: https://gerardo-esquivel.github.io/prod-electronica/
+
+theme:
+  name: material
+  language: es
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    logo: material/chip
+  palette:
+    - scheme: slate
+      primary: black
+      accent: indigo
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - toc.integrate
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - content.tooltips
+
 markdown_extensions:
+  - toc:
+      permalink: true
+      permalink_title: Enlace permanente
+      toc_depth: 2
+  - attr_list
+  - md_in_html
+  - admonition
+  - def_list
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
   - pymdownx.critic:
       mode: view
   - pymdownx.caret
   - pymdownx.keys
-  - def_list
-  - attr_list
-  - md_in_html
   - pymdownx.blocks.caption
-  - admonition
-  - pymdownx.details
-  - pymdownx.emoji
-  - pymdownx.tabbed:
-      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.tasklist:
       custom_checkbox: true
       clickable_checkbox: true
-theme:
-  name: material
-  highlightjs: true
-  icon:
-    logo: material/chip
-  palette:
-    - scheme: slate
-      primary: black
-      accent: teal
-  features:
-    - content.code.copy
-    - content.tooltips
-    - navigation.tabs
-    - navigation.top
+
 extra_css:
-  - https://use.fontawesome.com/releases/v6.5.2/css/all.css
-  - recursos/archivos/custom.css
+  - stylesheets/extra.css
+
 nav:
   - Inicio: index.md
-  - El equipo: Equipo de trabajo.md
   - Diseño de PCB: Primeros pasos Kicad.md
   - Preparación CAM: Mods CE.md
   - Fabricación CNC: Roland MonoFab.md
   - Simulación: Doc Multisim.md
+  - Equipo: Equipo de trabajo.md
