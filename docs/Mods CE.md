@@ -5,23 +5,23 @@ Este apartado constituye una continuación directa de nuestra documentación de 
 ---
 
 ## Tabla de Contenidos
-1. [Verificación y Preparación previa en Inkscape](#1-verificación-y-preparación-previa-en-inkscape)
+- [Verificación y Preparación previa en Inkscape](#1-verificación-y-preparación-previa-en-inkscape)
    - [1.1. Descarga y Sitio Oficial](#11-descarga-y-sitio-oficial)
    - [1.2. Consideraciones Clave de Diseño Vectorial](#12-consideraciones-clave-de-diseño-vectorial)
-2. [Introducción a la Plataforma Mods](#2-introducción-a-la-plataforma-mods)
+- [Introducción a la Plataforma Mods](#2-introducción-a-la-plataforma-mods)
    - [2.1. Acceso y Selección del Programa](#21-acceso-y-seleccion-del-programa)
    - [2.2. Vista General de la Interfaz de Nodos](#22-vista-general-de-la-interfaz-de-nodos)
-3. [Recorrido Detallado por la Interfaz de Mods](#3-recorrido-detallado-por-la-interfaz-de-mods)
+- [Recorrido Detallado por la Interfaz de Mods](#3-recorrido-detallado-por-la-interfaz-de-mods)
    - [3.1. Esquina Superior Izquierda: Carga del Archivo SVG](#31-esquina-superior-izquierda-carga-del-archivo-svg)
    - [3.2. Panel de Vistas (Lado Derecho): Previsualización Gráfica e Inversión](#32-panel-de-vistas-lado-derecho-previsualización-gráfica-e-inversión)
    - [3.3. Esquina Inferior Izquierda: Unidades y Herramientas Predefinidas](#33-esquina-inferior-izquierda-unidades-y-herramientas-predefinidas)
    - [3.4. Parte Central: Configuración Avanzada de Herramienta y Cálculo 3D](#34-parte-central-configuración-avanzada-de-herramienta-y-cálculo-3d)
    - [3.5. Panel Derecho: Orígenes, Velocidades y Exportación RML](#35-panel-derecho-orígenes-velocidades-y-exportación-rml)
-4. [Procedimiento de Fabricación y Configuración por Etapas](#4-procedimiento-de-fabricación-y-configuración-por-etapas)
+- [Procedimiento de Fabricación y Configuración por Etapas](#4-procedimiento-de-fabricación-y-configuración-por-etapas)
    - [4.1. Primera Etapa: Contornos](#41-primera-etapa-contornos)
    - [4.2. Segunda Etapa: Pistas (Trazado)](#42-segunda-etapa-pistas-trazado)
    - [4.3. Tercera Etapa: Perforaciones](#43-tercera-etapa-perforaciones)
-5. [Resumen de Parámetros Clave para el Maquinado](#5-resumen-de-parámetros-clave-para-el-maquinado)
+- [Resumen de Parámetros Clave para el Maquinado](#5-resumen-de-parámetros-clave-para-el-maquinado)
 
 ---
 

@@ -5,14 +5,14 @@ A continuación, se presenta la documentación detallada para la correcta instal
 ---
 
 ## Índice
-1. [Drivers Necesarios y VPanel](#1-drivers-necesarios-y-vpanel)
-2. [Operación del VPanel y Menú Principal](#2-operación-del-vpanel-y-menú-principal)
-3. [Estrategia de Trabajo por Fases y Herramientas](#3-estrategia-de-trabajo-por-fases-y-herramientas)
-4. [Camas de Sacrificio y Recursos](#4-camas-de-sacrificio-y-recursos)
-5. [Proceso de Fabricación Paso a Paso](#5-proceso-de-fabricación-paso-a-paso)
-6. [Evidencia en Video del Funcionamiento](#6-evidencia-en-video-del-funcionamiento)
-7. [Recomendaciones de Seguridad y Operación](#7-recomendaciones-de-seguridad-y-operación)
-8. [Galería de Placas Fabricadas](#8-galería-de-placas-fabricadas)
+- [Drivers Necesarios y VPanel](#1-drivers-necesarios-y-vpanel)
+- [Operación del VPanel y Menú Principal](#2-operación-del-vpanel-y-menú-principal)
+- [Estrategia de Trabajo por Fases y Herramientas](#3-estrategia-de-trabajo-por-fases-y-herramientas)
+- [Camas de Sacrificio y Recursos](#4-camas-de-sacrificio-y-recursos)
+- [Proceso de Fabricación Paso a Paso](#5-proceso-de-fabricación-paso-a-paso)
+- [Evidencia en Video del Funcionamiento](#6-evidencia-en-video-del-funcionamiento)
+- [Recomendaciones de Seguridad y Operación](#7-recomendaciones-de-seguridad-y-operación)
+- [Galería de Placas Fabricadas](#8-galería-de-placas-fabricadas)
 
 ---
 

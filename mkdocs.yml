@@ -38,7 +38,6 @@ theme:
     - content.tooltips
     - navigation.tabs
     - navigation.top
-    - toc.integrate
 extra_css:
   - https://use.fontawesome.com/releases/v6.5.2/css/all.css
   - recursos/archivos/custom.css
