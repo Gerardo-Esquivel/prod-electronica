@@ -1,0 +1,51 @@
+site_name: Producción Electrónica
+site_description: Portafolio de diseño, simulación y fabricación electrónica
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.critic:
+      mode: view
+  - pymdownx.caret
+  - pymdownx.keys
+  - def_list
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+  - admonition
+  - pymdownx.details
+  - pymdownx.emoji
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+theme:
+  name: material
+  highlightjs: true
+  icon:
+    logo: material/chip
+  palette:
+    - scheme: slate
+      primary: black
+      accent: teal
+  features:
+    - content.code.copy
+    - content.tooltips
+    - navigation.tabs
+    - navigation.top
+    - toc.integrate
+extra_css:
+  - https://use.fontawesome.com/releases/v6.5.2/css/all.css
+  - recursos/archivos/custom.css
+nav:
+  - Inicio: index.md
+  - El equipo: Equipo de trabajo.md
+  - Diseño de PCB: Primeros pasos Kicad.md
+  - Preparación CAM: Mods CE.md
+  - Fabricación CNC: Roland MonoFab.md
+  - Simulación: Doc Multisim.md
