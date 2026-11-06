@@ -1,0 +1,1068 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Portafolio de diseño, simulación y fabricación electrónica">
+      
+      
+      
+        <link rel="canonical" href="https://gerardo-esquivel.github.io/prod-electronica/Doc%20Multisim/">
+      
+      
+        <link rel="prev" href="../Roland%20MonoFab/">
+      
+      
+        <link rel="next" href="../Equipo%20de%20trabajo/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Simulación - Producción Electrónica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#guia-de-ni-multisim-diseno-y-simulacion" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Producción Electrónica" class="md-header__button md-logo" aria-label="Producción Electrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 4h12v1h3v2h-3v2h3v2h-3v2h3v2h-3v2h3v2h-3v1H6v-1H3v-2h3v-2H3v-2h3v-2H3V9h3V7H3V5h3zm5 11v3h1v-3zm2 0v3h1v-3zm2 0v3h1v-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Producción Electrónica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Simulación
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Primeros%20pasos%20Kicad/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Diseño de PCB
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Mods%20CE/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Preparación CAM
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Roland%20MonoFab/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Fabricación CNC
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Simulación
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Equipo%20de%20trabajo/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Equipo
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Producción Electrónica" class="md-nav__button md-logo" aria-label="Producción Electrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 4h12v1h3v2h-3v2h3v2h-3v2h3v2h-3v2h3v2h-3v1H6v-1H3v-2h3v-2H3v-2h3v-2H3V9h3V7H3V5h3zm5 11v3h1v-3zm2 0v3h1v-3zm2 0v3h1v-3z"/></svg>
+
+    </a>
+    Producción Electrónica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Primeros%20pasos%20Kicad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diseño de PCB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mods%20CE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preparación CAM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Roland%20MonoFab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fabricación CNC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulación
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#entorno-de-trabajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entorno de trabajo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logica-digital-y-compuertas-ttl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lógica digital y compuertas TTL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodos-etiquetas-y-pruebas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nodos, etiquetas y pruebas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convertidor-logico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Convertidor lógico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analisis-y-simulacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Análisis y simulación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instrumentacion-virtual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instrumentación virtual
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolucion-de-problemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resolución de problemas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Equipo%20de%20trabajo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="guia-de-ni-multisim-diseno-y-simulacion">Guía de NI Multisim: diseño y simulación<a class="headerlink" href="#guia-de-ni-multisim-diseno-y-simulacion" title="Enlace permanente">&para;</a></h1>
+<p>Bienvenido a esta guía sobre el uso de <strong>Multisim</strong> para el diseño, simulación y validación de circuitos electrónicos analógicos, digitales y mixtos. Este documento está diseñado para guiarte desde los conceptos fundamentales de la interfaz hasta la instrumentación virtual de laboratorio.</p>
+<hr />
+<details class="abstract">
+<summary>Explorar esta guía</summary>
+<ul>
+<li><a href="#entorno-de-trabajo">Entorno de trabajo</a></li>
+<li><a href="#logica-digital-y-compuertas-ttl">Lógica digital y compuertas TTL</a></li>
+<li><a href="#nodos-etiquetas-y-pruebas">Nodos, etiquetas y pruebas</a></li>
+<li><a href="#convertidor-logico">Convertidor lógico</a></li>
+<li><a href="#analisis-y-simulacion">Análisis y simulación</a></li>
+<li><a href="#instrumentacion-virtual">Instrumentación virtual</a></li>
+<li><a href="#resolucion-de-problemas">Resolución de problemas</a></li>
+</ul>
+</details>
+<h2 id="entorno-de-trabajo">Entorno de trabajo<a class="headerlink" href="#entorno-de-trabajo" title="Enlace permanente">&para;</a></h2>
+<details class="info">
+<summary>Distribución de la interfaz</summary>
+<p>Al cargar el software, te encontrarás con una interfaz dividida en cuatro áreas operativas clave:</p>
+<ul>
+<li><strong>Lienzo de Diseño Esquemático (Worksheet):</strong> Corresponde al área central cuadriculada. Aquí se colocan los componentes físicos y lógicos, se trazan las líneas de conexión eléctrica y se conectan las referencias a tierra.</li>
+<li><strong>Barra de Menús y Herramientas Superiores:</strong> Ubicada en la parte alta de la pantalla. Proporciona acceso a la gestión de archivos (<code>File</code>), edición (<code>Edit</code>), opciones de visualización (<code>View</code>), colocación de elementos (<code>Place</code>), configuración de simulación (<code>Simulate</code>) y ventanas emergentes (<code>Window</code>).</li>
+<li><strong>Barra de Selección de Componentes:</strong> Posicionada justo debajo de la barra de menús. Agrupa los dispositivos electrónicos en familias lógicas y analógicas mediante botones de acceso rápido:<ul>
+<li><strong>Place Source:</strong> Fuentes de alimentación CA, CC y señales digitales.</li>
+<li><strong>Place Basic:</strong> Resistencias, capacitores, inductores y switches.</li>
+<li><strong>Place Diodes:</strong> Diodos rectificadores, Zener y LEDs.</li>
+<li><strong>Place Transistors:</strong> Transistores BJT (NPN/PNP), MOSFETs y JFETs.</li>
+<li><strong>Place Analog:</strong> Amplificadores operacionales y comparadores.</li>
+<li><strong>Place TTL:</strong> Circuitos integrados digitales de la familia 7400.</li>
+</ul>
+</li>
+<li><strong>Barra Lateral Derecha (Instrumentos Virtuales):</strong> Un banco de medición interactivo que incluye multímetros digitales, generadores de funciones, wattímetros, osciloscopios de dos y cuatro canales, trazadores de Bode, frecuencímetros y el convertidor lógico.</li>
+</ul>
+</details>
+<p><img src="../recursos/imgs/multisim_pantalla_completa.png" alt="Vista general del entorno de trabajo de NI Multisim a pantalla completa" width="800"></p>
+<h2 id="logica-digital-y-compuertas-ttl">Lógica digital y compuertas TTL<a class="headerlink" href="#logica-digital-y-compuertas-ttl" title="Enlace permanente">&para;</a></h2>
+<p>El diseño de sistemas digitales dentro de Multisim permite evaluar funciones booleanas mediante componentes estándar de tecnología <strong>TTL</strong> (<em>Transistor-Transistor Logic</em>).</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Paso 1 · Compuertas</label><label for="__tabbed_1_2">Paso 2 · Subcompuertas</label><label for="__tabbed_1_3">Paso 3 · Entradas</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<h3 id="busqueda-e-insercion-de-compuertas-logicas">Búsqueda e Inserción de Compuertas Lógicas<a class="headerlink" href="#busqueda-e-insercion-de-compuertas-logicas" title="Enlace permanente">&para;</a></h3>
+<ol>
+<li>Dirígete a la barra superior de componentes y haz clic en el botón <strong>Place TTL</strong> (o presiona la combinación de teclas <code>Ctrl + W</code> y selecciona el grupo <code>TTL</code>).</li>
+<li>Se desplegará la ventana emergente <strong>Select a Component</strong> (Seleccionar Componente).</li>
+<li>En la esquina superior izquierda, dentro del desplegable <strong>Family</strong>, selecciona la subfamilia correspondiente (por ejemplo, <code>74LS</code> para tecnología Low-Power Schottky).</li>
+<li>En el cuadro de texto <strong>Component</strong>, escribe la matrícula específica del circuito integrado:<ul>
+<li>Para compuertas <strong>AND</strong> de dos entradas: Escribe <code>74LS08</code>.</li>
+<li>Para compuertas <strong>OR</strong> de dos entradas: Escribe <code>74LS32</code>.</li>
+<li>Para compuertas <strong>NOT</strong> (Inversores): Escribe <code>74LS04</code>.</li>
+</ul>
+</li>
+</ol>
+<p><img src="../recursos/imgs/multisim_busqueda_74ls08.png" alt="Ventana emergente Select a Component buscando el circuito integrado 74LS08" width="800"></p>
+</div>
+<div class="tabbed-block">
+<h3 id="entendiendo-las-sub-compuertas-a-b-c-d">Entendiendo las Sub-compuertas (<code>A</code>, <code>B</code>, <code>C</code>, <code>D</code>)<a class="headerlink" href="#entendiendo-las-sub-compuertas-a-b-c-d" title="Enlace permanente">&para;</a></h3>
+<p>Al hacer clic en <strong>OK</strong> para colocar un componente como el <code>74LS08</code>, notarás que la ventana no se cierra inmediatamente, sino que te muestra una pequeña sub-lista con las letras <code>A</code>, <code>B</code>, <code>C</code> y <code>D</code>:</p>
+<details class="note">
+<summary>Detalle técnico</summary>
+<p><strong>Explicación técnica de la estructura física del CI:</strong>
+Un circuito integrado real de 14 pines (como el <code>74LS08</code>) alberga internamente 4 compuertas AND independientes que comparten las mismas terminales de alimentación (VCC y GND). </p>
+<ul>
+<li>Al seleccionar <code>A</code>, Multisim colocará la primera compuerta del chip (pines 1, 2 y 3).</li>
+<li>Si vuelves a colocar otra compuerta del mismo grupo y seleccionas <code>B</code>, el programa entenderá que estás utilizando la segunda compuerta dentro del <strong>mismo chip físico</strong> (designado como <code>U1B</code>).</li>
+<li>Si requieres que pertenezcan a circuitos integrados independientes, debes seleccionar la opción para iniciar un nuevo encapsulado (generando un nuevo identificador como <code>U2A</code>).</li>
+</ul>
+</details>
+<p><img src="../recursos/imgs/multisim_seleccion_subpuerta.png" alt="Ventana de selección de sub-compuertas A, B, C o D dentro del circuito integrado" width="600"></p>
+</div>
+<div class="tabbed-block">
+<h3 id="configuracion-de-fuentes-digitales-interactivas">Configuración de Fuentes Digitales Interactivas<a class="headerlink" href="#configuracion-de-fuentes-digitales-interactivas" title="Enlace permanente">&para;</a></h3>
+<p>Para simular las entradas de una tabla de verdad e inyectar estados lógicos bajo demanda sin armar un circuito con switches de hardware y resistencias de <em>pull-down</em>:</p>
+<ol>
+<li>En la barra de componentes, haz clic en el icono <strong>Place Source</strong> (o <code>Ctrl + W</code> &gt; Grupo <code>Sources</code>).</li>
+<li>En la columna de la izquierda, selecciona la categoría <strong>DIGITAL_SOURCES</strong>.</li>
+<li>En la lista de componentes, haz clic sobre <strong>INTERACTIVE_DIGITAL_CONSTANT</strong>.</li>
+<li>Haz clic en <strong>OK</strong> y coloca tantas fuentes interactivas como entradas tenga tu función booleana (por ejemplo, cuatro fuentes para las entradas A, B, C y D).</li>
+<li>Por defecto, cada fuente interactiva muestra una tecla de acceso rápido (como <code>Space</code>). Si deseas cambiar la tecla que conmuta la señal de 0 V a 5 V, haz doble clic sobre el componente, ve a la pestaña <strong>Value</strong> y asigna una tecla específica del teclado (por ejemplo, la tecla <code>A</code> para la entrada A).</li>
+</ol>
+<p><img src="../recursos/imgs/multisim_fuente_digital_interactiva.png" alt="Colocación y configuración de fuentes digitales interactivas" width="800"></p>
+</div>
+</div>
+</div>
+<h2 id="nodos-etiquetas-y-pruebas">Nodos, etiquetas y pruebas<a class="headerlink" href="#nodos-etiquetas-y-pruebas" title="Enlace permanente">&para;</a></h2>
+<p>Para mantener un esquemático limpio, legible y profesional, Multisim permite conectar pines distantes mediante etiquetas de red (nodos virtuales), evitando cruces innecesarios de líneas.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Paso 1 · Etiquetas</label><label for="__tabbed_2_2">Paso 2 · Pruebas</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<h3 id="pasos-para-crear-y-nombrar-etiquetas-de-red-nodos">Pasos para Crear y Nombrar Etiquetas de Red (Nodos)<a class="headerlink" href="#pasos-para-crear-y-nombrar-etiquetas-de-red-nodos" title="Enlace permanente">&para;</a></h3>
+<ol>
+<li>Coloca el cursor sobre la terminal de salida de una fuente interactiva o pin de una compuerta. Observa cómo el puntero cambia de una flecha a una cruz de conexión.</li>
+<li>Haz clic izquierdo y arrastra un pequeño segmento de cable de 1 a 2 cm hacia la derecha. Haz doble clic en el aire para fijar el extremo libre de la línea.</li>
+<li>Haz <strong>doble clic</strong> sobre el cable recién trazado (el cual tomará un color rojo por defecto).</li>
+<li>Se abrirá la ventana emergente de propiedades de la red (<strong>Net Properties</strong>).</li>
+<li>En el campo de texto <strong>Net name</strong>, escribe el identificador de la señal (por ejemplo, <code>A</code>).</li>
+<li>En la sección inferior, asegúrate de marcar la casilla <strong>Show net name</strong> (Mostrar nombre de red) y haz clic en <strong>Aceptar</strong>.</li>
+<li>Ahora, dirígete a la entrada de la compuerta lógica donde debe llegar esa señal, traza un pequeño segmento de cable y haz doble clic sobre él. Renómbralo con exactamente el mismo texto (<code>A</code>).</li>
+<li>Al presionar <strong>Aceptar</strong>, Multisim desplegará un cuadro de diálogo notificando que la red <code>A</code> ya existe y preguntará si deseas unir ambos segmentos. Haz clic en <strong>Yes</strong>. Ambos puntos quedarán unidos eléctricamente sin necesidad de trazar una línea continua entre ellos.</li>
+</ol>
+<p><img src="../recursos/imgs/multisim_propiedades_red_nodo.png" alt="Ventana emergente Net Properties para asignación y visibilidad de etiquetas de red" width="650"></p>
+<p><img src="../recursos/imgs/multisim_propiedades_red_nodo1.png" alt="Ventana emergente Net Properties para asignación y visibilidad de etiquetas de red" width="650"></p>
+</div>
+<div class="tabbed-block">
+<h3 id="uso-de-puntas-de-prueba-logicas-probes">Uso de Puntas de Prueba Lógicas (<em>Probes</em>)<a class="headerlink" href="#uso-de-puntas-de-prueba-logicas-probes" title="Enlace permanente">&para;</a></h3>
+<p>Para verificar las salidas lógicas sin agregar un circuito físico con diodos LED, resistencia limitadora y tierra:</p>
+<ol>
+<li>Dirígete a la barra superior y busca el icono de <strong>Place Indicator</strong> (el cual tiene forma de display de 7 segmentos).</li>
+<li>Selecciona la categoría <strong>PROBE</strong>.</li>
+<li>Elige el color del indicador visual (<code>PROBE_DIGITAL_RED</code>, <code>PROBE_DIGITAL_GREEN</code>, <code>PROBE_DIGITAL_BLUE</code>, etc.) y haz clic en <strong>OK</strong>.</li>
+<li>Conecta el terminal de la punta de prueba directamente al nodo o pin de salida de tu última compuerta lógica.</li>
+<li>Al iniciar la simulación (<code>F5</code> o botón verde <strong>Play</strong>), la punta se iluminará intensamente cuando la combinación lógica entregue un nivel alto (5 V) y permanecerá apagada en nivel bajo (0 V).</li>
+</ol>
+<p><img src="../recursos/imgs/multisim_puntas_prueba.png" alt="Puntas de prueba lógicas conectadas a las salidas del circuito" width="700"></p>
+<p><img src="../recursos/imgs/multisim_puntas_prueba1.png" alt="Puntas de prueba lógicas conectadas a las salidas del circuito" width="700"></p>
+<p><img src="../recursos/imgs/multisim_puntas_prueba2.png" alt="Puntas de prueba lógicas conectadas a las salidas del circuito" width="700"></p>
+</div>
+</div>
+</div>
+<h2 id="convertidor-logico">Convertidor lógico<a class="headerlink" href="#convertidor-logico" title="Enlace permanente">&para;</a></h2>
+<p>El <strong>Convertidor Lógico</strong> es uno de los instrumentos virtuales más potentes y versátiles integrados en Multisim. Su propósito principal es servir como un puente matemático automatizado capaz de interconectar tablas de verdad, expresiones algebraicas booleanas y diagramas esquemáticos en cuestión de segundos.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Conectar</label><label for="__tabbed_3_2">Operar el convertidor</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<h3 id="configuracion-de-conexiones-del-instrumento">Configuración de Conexiones del Instrumento<a class="headerlink" href="#configuracion-de-conexiones-del-instrumento" title="Enlace permanente">&para;</a></h3>
+<ol>
+<li>Dirígete a la barra lateral derecha de instrumentos virtuales y haz clic sobre el icono del <strong>Logic Converter</strong> (identificado visualmente con una compuerta y una pequeña matriz de ceros y unos). Colócalo en una sección despejada del lienzo de trabajo.</li>
+<li><strong>Terminales de Entrada (A, B, C, etc.):</strong> Debes conectar estas terminales desde la parte superior izquierda del instrumento hacia las líneas o nodos de entrada de tu circuito lógico. Es una buena práctica respetar el orden alfabético, conectando el bit más significativo (MSB) en la entrada superior y descendiendo secuencialmente hasta el bit menos significativo (LSB).</li>
+<li><strong>Terminal de Salida (<code>S</code>):</strong> Conecta esta terminal (ubicada en la parte derecha del instrumento) directamente hacia la salida o nodo principal de tu red lógica.</li>
+</ol>
+<p><img src="../recursos/imgs/multisim_logic_converter_conexion.png" alt="Conexión correcta de las entradas y salidas del convertidor lógico en Multisim" width="550"></p>
+<p><img src="../recursos/imgs/multisim_logic_converter_conexion1.png" alt="Conexión correcta de las entradas y salidas del convertidor lógico en Multisim" width="700"></p>
+</div>
+<div class="tabbed-block">
+<h3 id="operacion-interactiva-del-panel-de-control">Operación Interactiva del Panel de Control<a class="headerlink" href="#operacion-interactiva-del-panel-de-control" title="Enlace permanente">&para;</a></h3>
+<p>Haz <strong>doble clic</strong> sobre el icono del instrumento en el esquemático para desplegar su ventana de control flotante. En su interfaz encontrarás un panel izquierdo con la tabla de verdad y una botonera inferior de conversión directa:</p>
+<p><img src="../recursos/imgs/multisim_logic_converter_panel.png" alt="Panel de control detallado del Logic Converter mostrando la tabla de verdad y funciones" width="600"></p>
+<ul>
+<li><strong>Extracción de la Tabla de Verdad desde el Esquema (<code>Circuito -&gt; Tabla</code>):</strong> Si ya terminaste de cablear un circuito digital en el lienzo y deseas comprobar su comportamiento matemático, haz clic en este primer botón (representado por una flecha que va de un circuito hacia una matriz). El instrumento simulará automáticamente todas las combinaciones posibles de las entradas y rellenará la tabla con los estados binarios de salida correspondientes.</li>
+</ul>
+<p><img src="../recursos/imgs/multisim_logic_converter_panel1.png" alt="Panel de control detallado del Logic Converter mostrando la tabla de verdad y funciones" width="600"></p>
+<ul>
+<li><strong>Simplificación y Obtención de la Función Booleana (<code>Tabla -&gt; Función</code>):</strong> Si introduces ceros y unos de forma manual en la tabla de verdad (haciendo clic sobre las celdas), o si el instrumento acaba de leer tu circuito, haz clic en el segundo botón. Multisim resolverá el mapa algebraico y te arrojará la función booleana simplificada en formato de suma de productos (minitérminos) de forma instantánea.</li>
+</ul>
+<p><img src="../recursos/imgs/multisim_logic_converter_panel2.png" alt="Panel de control detallado del Logic Converter mostrando la tabla de verdad y funciones" width="600"></p>
+<ul>
+<li><strong>Síntesis Automática de Esquemáticos (De Función o Tabla a Circuito):</strong> En la sección superior del panel puedes escribir directamente una expresión algebraica booleana utilizando operadores lógicos estándar. Al hacer clic en los botones de conversión hacia el esquemático, el programa generará automáticamente todas las compuertas y conexiones necesarias y las dibujará por ti en una nueva hoja de trabajo.</li>
+</ul>
+<p><img src="../recursos/imgs/multisim_logic_converter_panel3.png" alt="Panel de control detallado del Logic Converter mostrando la tabla de verdad y funciones" width="600"></p>
+<p><img src="../recursos/imgs/multisim_logic_converter_panel4.png" alt="Panel de control detallado del Logic Converter mostrando la tabla de verdad y funciones" width="600"></p>
+</div>
+</div>
+</div>
+<h2 id="analisis-y-simulacion">Análisis y simulación<a class="headerlink" href="#analisis-y-simulacion" title="Enlace permanente">&para;</a></h2>
+<p>Además de la simulación interactiva en tiempo real, Multisim integra potentes motores matemáticos basados en algoritmos SPICE para realizar análisis físicos y eléctricos especializados en componentes analógicos y semiconductores.</p>
+<h3 id="ruta-de-acceso-a-los-motores-de-analisis">Ruta de Acceso a los Motores de Análisis<a class="headerlink" href="#ruta-de-acceso-a-los-motores-de-analisis" title="Enlace permanente">&para;</a></h3>
+<p>Para configurar cualquiera de estas pruebas avanzadas, dirígete a la barra de menús superior, haz clic en <strong>Simulate</strong> y selecciona la opción <strong>Analyses and Simulation</strong> (o presiona la combinación de teclas correspondiente si está configurada). Se abrirá un menú principal con pestañas desplegables para cada tipo de estudio.</p>
+<p><img src="../recursos/imgs/multisim_menu_analisis.png" alt="Menú superior de análisis y simulación en NI Multisim" width="700"></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Transitorio</label><label for="__tabbed_4_2">Barrido DC</label><label for="__tabbed_4_3">Temperatura</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<h3 id="analisis-transitorio-transient-analysis">Análisis Transitorio (<em>Transient Analysis</em>)<a class="headerlink" href="#analisis-transitorio-transient-analysis" title="Enlace permanente">&para;</a></h3>
+<details class="info">
+<summary>Propósito y aplicación</summary>
+<p>Estudia cómo evolucionan las variables del circuito (voltajes y corrientes) en función del tiempo real. Es el análisis fundamental para observar fenómenos dinámicos y transitorios, tales como los procesos de carga y descarga exponencial en capacitores e inductores, o el comportamiento temporal de circuitos osciladores y fuentes conmutadas.</p>
+</details>
+<p><strong>Configuración</strong></p>
+<ol>
+<li>En la ventana de análisis, selecciona la pestaña <strong>Transient</strong>.</li>
+</ol>
+<p><img src="../recursos/imgs/multisim_analisis_transitorio.png" alt="Ventana de configuración del análisis transitorio y gráfica de respuesta exponencial" width="800"></p>
+<ol>
+<li>En el apartado de parámetros temporales, define el tiempo inicial (<strong>Start time</strong>, normalmente configurado en <code>0 s</code>) y el tiempo de parada (<strong>Stop time</strong>, por ejemplo, <code>5 ms</code> o <code>1 s</code> dependiendo de la constante de tiempo τ = RC de tu circuito).</li>
+</ol>
+<p><img src="../recursos/imgs/multisim_analisis_transitorio1.png" alt="Ventana de configuración del análisis transitorio y gráfica de respuesta exponencial" width="800"></p>
+<ol>
+<li>En la sección de condiciones iniciales, puedes optar por calcular el punto de operación de polarización automática (<strong>Automatically determine initial conditions</strong>).</li>
+<li>Dirígete a la pestaña <strong>Output</strong> (Salida) en la misma ventana, busca en la lista de variables del circuito el nodo o componente que deseas medir (por ejemplo, el voltaje en las terminales del capacitor <code>V(capacitor)</code>) y haz clic en el botón <strong>Add</strong> para pasarlo a las variables activas a graficar.</li>
+</ol>
+<p><img src="../recursos/imgs/multisim_analisis_transitorio2.png" alt="Ventana de configuración del análisis transitorio y gráfica de respuesta exponencial" width="800"></p>
+<ol>
+<li>Haz clic en el botón <strong>Simulate</strong> (o <strong>Run</strong>) ubicado en la parte inferior derecha de la ventana para desplegar la gráfica de respuesta temporal.</li>
+</ol>
+<p><img src="../recursos/imgs/multisim_analisis_transitorio3.png" alt="Ventana de configuración del análisis transitorio y gráfica de respuesta exponencial" width="800"></p>
+</div>
+<div class="tabbed-block">
+<h3 id="analisis-de-barrido-dc-dc-sweep-analysis">Análisis de Barrido DC (<em>DC Sweep Analysis</em>)<a class="headerlink" href="#analisis-de-barrido-dc-dc-sweep-analysis" title="Enlace permanente">&para;</a></h3>
+<details class="info">
+<summary>Propósito y aplicación</summary>
+<p>Realiza variaciones incrementales de voltaje o corriente punto a punto en condiciones de estado estacionario. Es la herramienta estándar en electrónica analógica para caracterizar dispositivos semiconductores no lineales, como la obtención de las curvas características de salida de un transistor bipolar (BJT en configuración de emisor común), relacionando el voltaje colector-emisor (VCE) frente a la corriente de colector (IC) ante distintos escalones de corriente de base (IB).</p>
+</details>
+<p><strong>Configuración</strong></p>
+<ol>
+<li>Coloca un transistor (como el modelo clásico <code>2N2222</code>) y asegúrate de conectar fuentes de alimentación independientes en la base y en el colector.</li>
+<li>Abre el menú <strong>Analyses and Simulation</strong> y selecciona la pestaña <strong>DC Sweep</strong>.</li>
+</ol>
+<p><img src="../recursos/imgs/multisim_analisis_dc_sweep.png" alt="Configuración de barrido DC para curvas características de transistores en Multisim" width="800"></p>
+<ol>
+<li>Define la fuente principal de barrido (<strong>Primary source</strong>) que fungirá como el eje X de tu gráfica (por ejemplo, la fuente de voltaje del colector, nombrada como <code>VCE</code>). Establece el valor inicial, el valor final y el tamaño del incremento de paso (<strong>Voltage step</strong>).</li>
+<li>Si deseas generar una familia de curvas múltiples, habilita la opción de fuente secundaria (<strong>Secondary source</strong>), selecciona la fuente de la base (<code>IB</code>) y configura sus valores de incremento escalonado.</li>
+<li>En la pestaña <strong>Output</strong>, selecciona la variable dependiente de salida (por ejemplo, la corriente que atraviesa el pin de colector del transistor, <code>I(Q1)</code>) y haz clic en <strong>Add</strong>.</li>
+</ol>
+<p><img src="../recursos/imgs/multisim_analisis_dc_sweep1.png" alt="Configuración de barrido DC para curvas características de transistores en Multisim" width="800"></p>
+<ol>
+<li>Presiona <strong>Simulate</strong> para trazar la familia de curvas características.</li>
+</ol>
+<p><img src="../recursos/imgs/multisim_analisis_dc_sweep2.png" alt="Configuración de barrido DC para curvas características de transistores en Multisim" width="800"></p>
+</div>
+<div class="tabbed-block">
+<h3 id="analisis-de-temperatura-temperature-analysis">Análisis de Temperatura (<em>Temperature Analysis</em>)<a class="headerlink" href="#analisis-de-temperatura-temperature-analysis" title="Enlace permanente">&para;</a></h3>
+<details class="info">
+<summary>Propósito y aplicación</summary>
+<p>Permite evaluar la estabilidad térmica y la sensibilidad de un circuito ante variaciones drásticas en la temperatura ambiental o de operación de los componentes. Es indispensable en diseños industriales, automotrices o aeroespaciales donde los transistores y diodos sufren derivas en sus parámetros físicos por calentamiento.</p>
+</details>
+<p><strong>Configuración</strong></p>
+<ol>
+<li>Selecciona la pestaña <strong>Temperature Analysis</strong> dentro del menú de simulaciones avanzadas.</li>
+</ol>
+<p><img src="../recursos/imgs/multisim_analisis_temperatura.png" alt="Panel de configuración del análisis de temperatura en Multisim" width="600"></p>
+<ol>
+<li>Configura el rango térmico de estudio especificando la temperatura inicial y la temperatura final en grados centígrados (por ejemplo, desde los 0 °C hasta los 150 °C) junto con el número de puntos de muestreo o incremento lineal.</li>
+<li>Vincula este análisis a una simulación transitoria o de barrido DC para observar cómo se desplazan o deforman las curvas características del circuito conforme aumenta la temperatura de los semiconductores.</li>
+</ol>
+<p><img src="../recursos/imgs/multisim_analisis_temperatura1.png" alt="Panel de configuración del análisis de temperatura en Multisim" width="600"></p>
+<p><img src="../recursos/imgs/multisim_analisis_temperatura2.png" alt="Panel de configuración del análisis de temperatura en Multisim" width="600"></p>
+</div>
+</div>
+</div>
+<h2 id="instrumentacion-virtual">Instrumentación virtual<a class="headerlink" href="#instrumentacion-virtual" title="Enlace permanente">&para;</a></h2>
+<p>Para el diseño, medición, filtrado y validación de circuitos analógicos que operan con corriente alterna, señales periódicas o transductores, Multisim ofrece un banco de instrumentos virtuales de laboratorio con interfaces hiperrealistas.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Generador</label><label for="__tabbed_5_2">Osciloscopio</label><label for="__tabbed_5_3">Auto-set</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<h3 id="el-generador-de-funciones-function-generator">El Generador de Funciones (<em>Function Generator</em>)<a class="headerlink" href="#el-generador-de-funciones-function-generator" title="Enlace permanente">&para;</a></h3>
+<p>El generador de funciones es el instrumento encargado de inyectar señales de estímulo de CA personalizables hacia nuestro circuito:</p>
+<ul>
+<li><strong>Ubicación y Colocación:</strong> Dirígete a la barra lateral derecha de instrumentos virtuales y haz clic sobre el icono del <strong>Function Generator</strong>. Colócalo en el lienzo de trabajo.</li>
+<li><strong>Terminales de Conexión:</strong><ul>
+<li><strong>Terminal Positiva (<code>+</code>):</strong> Suministra la señal de salida respecto a la referencia de tierra.</li>
+<li><strong>Terminal Negativa (<code>-</code>):</strong> Suministra la señal con una inversión de fase de 180 grados.</li>
+<li><strong>Terminal Común (<code>COM</code>):</strong> Referencia central de tierra del generador.</li>
+</ul>
+</li>
+<li><strong>Ajuste de Parámetros en el Panel de Control:</strong> Haz doble clic sobre el icono del generador para abrir su carátula virtual. Desde aquí podrás configurar:<ul>
+<li><strong>Forma de onda:</strong> Selecciona entre onda senoidal (pura para pruebas de audio y CA), triangular (para rampas de barrido) o cuadrada (para pulsos y modulación).</li>
+<li><strong>Frecuencia (Frequency):</strong> Define el valor numérico y la unidad de medida (Hertz, kHz o MHz) mediante el selector flotante o cuadro de texto.</li>
+<li><strong>Amplitud (Amplitude):</strong> Configura la amplitud pico-pico (Vpp), pico (Vp) o valor eficaz (VRMS).</li>
+<li><strong>Offset de CD:</strong> Permite desplazar el nivel de continua de la señal hacia arriba o hacia abajo respecto al eje de cero voltios.</li>
+</ul>
+</li>
+</ul>
+<p><img src="../recursos/imgs/multisim_generador_funciones_panel.png" alt="Carátula y panel de configuración del generador de funciones virtual" width="300"></p>
+<p><img src="../recursos/imgs/multisim_generador_funciones_panel1.png" alt="Carátula y panel de configuración del generador de funciones virtual" width="600"></p>
+<details class="note">
+<summary>Señales personalizadas mediante archivos externos</summary>
+<p>Además de las ondas periódicas estándar, Multisim permite utilizar fuentes controladas (<em>Piecewise Linear Sources</em> o fuentes de voltaje por archivos de datos) para reproducir señales complejas del mundo real (por ejemplo, electrocardiogramas biomédicos, pulsos de sensores automotrices o transitorios de motores). Basta con cargar un archivo de texto con pares de datos de tiempo y voltaje (<code>t, V</code>) para que la fuente reproduzca el perfil dinámico de la señal sobre tu circuito.</p>
+</details>
+</div>
+<div class="tabbed-block">
+<h3 id="el-osciloscopio-virtual-y-la-configuracion-de-canales">El Osciloscopio Virtual y la Configuración de Canales<a class="headerlink" href="#el-osciloscopio-virtual-y-la-configuracion-de-canales" title="Enlace permanente">&para;</a></h3>
+<p>Para analizar la respuesta en el tiempo, formas de onda y efectos de semiconductores (como la rectificación mediante diodos), se utiliza el osciloscopio:</p>
+<ul>
+<li><strong>Selección del Instrumento:</strong> Puedes seleccionar el osciloscopio estándar de dos canales, el osciloscopio de cuatro canales, o réplicas de instrumentos comerciales de laboratorio como el <strong>Osciloscopio Tektronix</strong>.</li>
+</ul>
+<p><img src="../recursos/imgs/multisim_conexion_osciloscopio.png" alt="Conexión de osciloscopio con personalización de color en los cables de medición" width="300"></p>
+<ul>
+<li><strong>Conexión de Canales y Tierras:</strong><ul>
+<li>Conecta el <strong>Canal A (CH1)</strong> al nodo donde ingresa la señal de estímulo (por ejemplo, a la salida del generador de funciones).</li>
+<li>Conecta el <strong>Canal B (CH2)</strong> al nodo de interés donde deseas medir la respuesta (por ejemplo, la salida del circuito tras pasar por un diodo rectificador o filtro).</li>
+<li>Asegúrate de interconectar las terminales de tierra de los canales o utilizar el nodo de referencia común (<code>GND</code>) del circuito esquemático.</li>
+</ul>
+</li>
+</ul>
+<p><img src="../recursos/imgs/multisim_conexion_osciloscopio1.png" alt="Conexión de osciloscopio con personalización de color en los cables de medición" width="800"></p>
+<div class="admonition tip">
+<p class="admonition-title">Recomendación de configuración</p>
+<p><strong>Recomendación crítica de ruteo visual (Cambio de color de cables):</strong>
+Por defecto, Multisim dibuja todas las líneas de conexión en color rojo. Para evitar confusiones al analizar múltiples señales superpuestas en la pantalla del osciloscopio:</p>
+<ol>
+<li>Haz <strong>clic derecho sobre el cable</strong> que se conecta al Canal B.</li>
+<li>En el menú contextual, selecciona <strong>Properties</strong> (Propiedades) o <strong>Net Color</strong> (Color de red).</li>
+<li>Elige un color contrastante (por ejemplo, azul, amarillo o cian) y presiona <strong>Aceptar</strong>.</li>
+<li>De esta manera, el trazo en la pantalla del osciloscopio coincidirá de forma exacta con el color asignado a cada cable.</li>
+</ol>
+</div>
+<p><img src="../recursos/imgs/multisim_conexion_osciloscopio2.png" alt="Conexión de osciloscopio con personalización de color en los cables de medición" width="600"></p>
+<p><img src="../recursos/imgs/multisim_conexion_osciloscopio3.png" alt="Conexión de osciloscopio con personalización de color en los cables de medición" width="800"></p>
+</div>
+<div class="tabbed-block">
+<h3 id="operacion-y-uso-de-la-funcion-auto-set">Operación y Uso de la Función Auto-set<a class="headerlink" href="#operacion-y-uso-de-la-funcion-auto-set" title="Enlace permanente">&para;</a></h3>
+<ol>
+<li>Haz clic en el botón verde <strong>Correr</strong> (<code>Run</code>) o presiona <code>F5</code> para iniciar el motor de simulación.</li>
+<li>Haz <strong>doble clic</strong> sobre el icono del osciloscopio para desplegar la pantalla principal del equipo.</li>
+<li>Si utilizas el modelo Tektronix, presiona el botón de encendido (<strong>Power</strong>).</li>
+<li>Presiona el botón de ajuste automático (<strong>Auto-set</strong>). El osciloscopio analizará de inmediato las señales presentes en las entradas y recalibrará automáticamente la base de tiempo (Time/Div) y la escala de amplitud vertical (Volts/Div) de cada canal, mostrando las formas de onda perfectamente centradas, estables y sincronizadas.</li>
+<li><strong>Análisis de Resultados:</strong> Al comparar las ondas, podrás observar fenómenos físicos como la rectificación de media onda de un diodo (donde se permite el paso del semiciclo positivo y se bloquea por completo el semiciclo negativo al quedar en polarización inversa) o la atenuación y desfasamiento en filtros activos y pasivos.</li>
+</ol>
+<p><img src="../recursos/imgs/multisim_osciloscopio_pantalla.png" alt="Pantalla del osciloscopio virtual mostrando señales superpuestas tras la función Auto-set" width="800"></p>
+<p><img src="../recursos/imgs/multisim_osciloscopio_pantalla1.png" alt="Pantalla del osciloscopio virtual mostrando señales superpuestas tras la función Auto-set" width="700"></p>
+</div>
+</div>
+</div>
+<h2 id="resolucion-de-problemas">Resolución de problemas<a class="headerlink" href="#resolucion-de-problemas" title="Enlace permanente">&para;</a></h2>
+<details class="tip">
+<summary>Conflicto de Modos de Simulación</summary>
+<p>Si al presionar el botón de inicio el programa muestra una advertencia de error o la simulación se congela, verifica el menú desplegable de la esquina superior derecha. Asegúrate de que el modo activo corresponda a <strong>Interactive</strong> para pruebas dinámicas con instrumentos o a <strong>Analyses and Simulation</strong> si ejecutas barridos matemáticos.</p>
+</details>
+<div class="admonition warning">
+<p class="admonition-title">Importancia de la Tierra (GND)</p>
+<p>Todos los circuitos analógicos y mixtos en Multisim requieren al menos una referencia a tierra física (0 V). Si olvidas colocarla, el motor de cálculo SPICE no podrá resolver la matriz nodal y arrojará un error de convergencia.</p>
+</div>
+<details class="tip">
+<summary>Validación previa a la manufactura</summary>
+<p>La implementación metódica de esta guía y el dominio de las herramientas de Multisim te permitirán optimizar diseños, prevenir daños en componentes reales por sobrecorrientes y garantizar la funcionalidad de tus tarjetas de circuito impreso (PCB) desde la etapa teórica.</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../Roland%20MonoFab/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Fabricación CNC">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Fabricación CNC
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Equipo%20de%20trabajo/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Equipo">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Equipo
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "toc.integrate", "navigation.top", "navigation.footer", "content.code.copy", "content.tooltips"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+    
+  </body>
+</html>

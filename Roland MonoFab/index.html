@@ -1,0 +1,1001 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Portafolio de diseño, simulación y fabricación electrónica">
+      
+      
+      
+        <link rel="canonical" href="https://gerardo-esquivel.github.io/prod-electronica/Roland%20MonoFab/">
+      
+      
+        <link rel="prev" href="../Mods%20CE/">
+      
+      
+        <link rel="next" href="../Doc%20Multisim/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Fabricación CNC - Producción Electrónica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fabricacion-cnc-con-roland-monofab-srm-20" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Producción Electrónica" class="md-header__button md-logo" aria-label="Producción Electrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 4h12v1h3v2h-3v2h3v2h-3v2h3v2h-3v2h3v2h-3v1H6v-1H3v-2h3v-2H3v-2h3v-2H3V9h3V7H3V5h3zm5 11v3h1v-3zm2 0v3h1v-3zm2 0v3h1v-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Producción Electrónica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fabricación CNC
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Primeros%20pasos%20Kicad/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Diseño de PCB
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Mods%20CE/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Preparación CAM
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Fabricación CNC
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Doc%20Multisim/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Simulación
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Equipo%20de%20trabajo/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Equipo
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Producción Electrónica" class="md-nav__button md-logo" aria-label="Producción Electrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 4h12v1h3v2h-3v2h3v2h-3v2h3v2h-3v2h3v2h-3v1H6v-1H3v-2h3v-2H3v-2h3v-2H3V9h3V7H3V5h3zm5 11v3h1v-3zm2 0v3h1v-3zm2 0v3h1v-3z"/></svg>
+
+    </a>
+    Producción Electrónica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Primeros%20pasos%20Kicad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diseño de PCB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mods%20CE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preparación CAM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fabricación CNC
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fabricación CNC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-de-drivers-y-vpanel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instalación de drivers y VPanel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control-de-la-maquina" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control de la máquina
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fases-y-herramientas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fases y herramientas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#camas-de-sacrificio-y-recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Camas de sacrificio y recursos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fabricacion-paso-a-paso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fabricación paso a paso
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evidencia-en-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidencia en video
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seguridad-y-operacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seguridad y operación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#placas-fabricadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Placas fabricadas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Doc%20Multisim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Equipo%20de%20trabajo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="fabricacion-cnc-con-roland-monofab-srm-20">Fabricación CNC con Roland MonoFab SRM-20<a class="headerlink" href="#fabricacion-cnc-con-roland-monofab-srm-20" title="Enlace permanente">&para;</a></h1>
+<p>A continuación, se presenta la documentación detallada para la correcta instalación, configuración y operación de la fresadora Roland MonoFab SRM-20, diseñada específicamente para el flujo de trabajo en la fabricación de circuitos impresos (PCBs).</p>
+<hr />
+<details class="abstract">
+<summary>Explorar esta guía</summary>
+<ul>
+<li><a href="#instalacion-de-drivers-y-vpanel">Instalación de drivers y VPanel</a></li>
+<li><a href="#control-de-la-maquina">Control de la máquina</a></li>
+<li><a href="#fases-y-herramientas">Fases y herramientas</a></li>
+<li><a href="#camas-de-sacrificio-y-recursos">Camas de sacrificio y recursos</a></li>
+<li><a href="#fabricacion-paso-a-paso">Fabricación paso a paso</a></li>
+<li><a href="#evidencia-en-video">Evidencia en video</a></li>
+<li><a href="#seguridad-y-operacion">Seguridad y operación</a></li>
+<li><a href="#placas-fabricadas">Placas fabricadas</a></li>
+</ul>
+</details>
+<h2 id="instalacion-de-drivers-y-vpanel">Instalación de drivers y VPanel<a class="headerlink" href="#instalacion-de-drivers-y-vpanel" title="Enlace permanente">&para;</a></h2>
+<p>Para asegurar la correcta comunicación entre la computadora y la máquina, es indispensable contar con los controladores oficiales y el software de control <strong>VPanel</strong>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Paso 1 · Drivers</label><label for="__tabbed_1_2">Paso 2 · VPanel</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><strong>Drivers de la máquina:</strong> Puedes realizar la descarga directa desde este repositorio en un archivo <code>.zip</code> o consultar la sección oficial de soporte de Roland para asegurar la compatibilidad con tu sistema operativo. Una vez descargado, sigue los pasos de instalación seleccionando la carpeta correcta para tu arquitectura:</li>
+</ul>
+<p><p align="center">
+  <a href="../recursos/archivos/monofabDriver_V180.zip" target="_blank">[monofabDriver_V180 (Zip)]</a>
+</p></p>
+<details class="example">
+<summary>Instalación del driver en imágenes</summary>
+<p><p align="center">
+  <img src="../recursos/imgs/monofab-driver-instalacion-paso-01.png" alt="Vista previa del proceso" width="800"><br>
+</p></p>
+<p><p align="center">
+  <img src="../recursos/imgs/monofab-driver-sistema-operativo.png" alt="Selección de carpeta según sistema operativo" width="800"><br>
+  <sub>Figura: Selección de la carpeta según nuestro sistema operativo.</sub>
+</p></p>
+<p><p align="center">
+  <img src="../recursos/imgs/monofab-driver-preparacion-instalador.png" alt="Preparación de ejecución" width="800"><br>
+</p></p>
+<p><p align="center">
+  <img src="../recursos/imgs/monofab-driver-ejecucion-administrador.png" alt="Ejecución del driver como administrador" width="800"><br>
+  <sub>Figura: Ejecución del driver srm-20 como administrador.</sub>
+</p></p>
+</details>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><strong>Instalación del VPanel:</strong> El VPanel es la interfaz gráfica que nos permite manipular los ejes de la máquina, configurar velocidades y enviar los archivos de corte (<code>.rml</code>). Puedes descargar el programa desde el siguiente enlace; una vez descargado, descomprímelo y ejecuta el archivo:</li>
+</ul>
+<p><p align="center">
+  <a href="../recursos/archivos/VPanel-for-SRM-20_Installer.zip" target="_blank">[VPanel-for-SRM-20_Installer (Zip)]</a>
+</p></p>
+</div>
+</div>
+</div>
+<h2 id="control-de-la-maquina">Control de la máquina<a class="headerlink" href="#control-de-la-maquina" title="Enlace permanente">&para;</a></h2>
+<p>El VPanel cuenta con diferentes secciones clave para el control de movimiento y la gestión de trabajos.</p>
+<p align="center">
+  <img src="../recursos/imgs/monofab-vpanel-pantalla-principal.png" alt="Menú principal del VPanel" width="800"><br>
+  <sub>Figura: Menú principal del VPanel para SRM-20, mostrando las coordenadas, controles de movimiento, pasos del cursor y botones de operación.</sub>
+</p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Movimiento</label><label for="__tabbed_2_2">Orígenes y trabajo</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<h3 id="controles-de-movimiento-y-unidades-cursor-step">Controles de Movimiento y Unidades (Cursor Step)<a class="headerlink" href="#controles-de-movimiento-y-unidades-cursor-step" title="Enlace permanente">&para;</a></h3>
+<ul>
+<li>🟠 <strong>Naranja y 🟢 Verde:</strong> En la parte central del VPanel encontramos los botones de desplazamiento de los ejes X, Y y Z.</li>
+<li>🔵 <strong>Azul:</strong> Justo debajo se encuentran los selectores de <strong>Cursor Step</strong> (<code>Continue</code>, <code>x100</code>, <code>x10</code>, <code>x1</code>). Entre más pequeño sea el valor seleccionado (como <code>x1</code>), menor será el recorrido de la herramienta por cada clic. Esto es <strong>extremadamente útil para la calibración fina</strong> y ajustes de precisión.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<h3 id="origenes-y-sistema-de-coordenadas">Orígenes y Sistema de Coordenadas<a class="headerlink" href="#origenes-y-sistema-de-coordenadas" title="Enlace permanente">&para;</a></h3>
+<ul>
+<li>🔴 <strong>Rojo (Guardar Orígenes):</strong> Podemos definir y almacenar nuestros puntos de origen (ceros de trabajo en X, Y y Z) utilizando los botones de configuración de coordenadas en el panel lateral derecho.</li>
+<li>🟡 <strong>Amarillo (Pausa y Cancelar):</strong> En la esquina inferior derecha se encuentran los botones de control de ejecución (<code>PAUSE</code>/<code>RESUME</code> y <code>Cancel</code>), vitales para detener el proceso en caso de cualquier emergencia o imprevisto.</li>
+<li>🟤 <strong>Café:</strong> Muestra las coordenadas actuales.</li>
+<li>🟣 <strong>Morado:</strong> Mueve hacia nuestro origen guardado.</li>
+<li>⚪ <strong>Rosa:</strong> Comenzar un proceso de corte.</li>
+</ul>
+<p><p align="center">
+  <img src="../recursos/imgs/monofab-vpanel-panel-controles.png" alt="Vista del panel con las secciones mencionadas" width="800"><br>
+  <sub>Figura: Vista del panel con las secciones mencionadas.</sub>
+</p></p>
+<div class="admonition warning">
+<p class="admonition-title">Antes de ejecutar Output</p>
+<p>Una vez dado clic en el botón de <strong><code>Cut</code></strong> se nos desplegará el siguiente menú donde podremos subir un archivo. El fresado comenzará instantáneamente una vez que demos clic en <strong><code>Output</code></strong>. Es <strong>muy importante</strong> antes de empezar haber calibrado correctamente todos nuestros ejes y tener despegada la broca de nuestra placa para evitar rayones o desgastar la punta.</p>
+</div>
+<p><p align="center">
+  <img src="../recursos/imgs/monofab-vpanel-carga-trabajo.png" alt="Vista del panel para subir archivos" width="800"><br>
+  <sub>Figura: Vista del panel para subir archivos.</sub>
+</p></p>
+</div>
+</div>
+</div>
+<h2 id="fases-y-herramientas">Fases y herramientas<a class="headerlink" href="#fases-y-herramientas" title="Enlace permanente">&para;</a></h2>
+<p>Para la fabricación exitosa de una placa de circuito impreso (PCB), es fundamental mantener un orden riguroso y utilizar la herramienta adecuada en cada etapa:</p>
+<ol>
+<li><strong>Perforaciones:</strong> Se inicia con las perforaciones de la placa. Para esta fase utilizaremos una broca especial de <strong>0.8 mm</strong>.</li>
+<li><strong>Trazado de Pistas:</strong> En esta segunda etapa se generan las trazas del circuito. Utilizaremos un cortador en V (<em>V-cutter</em>) con un diámetro de <strong>0.4 mm</strong>.</li>
+<li><strong>Contorno:</strong> Finalmente, se realiza el corte exterior para separar la placa utilizando una herramienta de fresado de <strong>2 mm</strong>.</li>
+</ol>
+<p align="center">
+  <img src="../recursos/imgs/monofab-herramientas-llave-allen.jpeg" alt="Herramientas y llave Allen" width="800"><br>
+  <sub>Figura: Herramientas de sujeción, espátulas, brocas y la llave Allen indispensable para aflojar y apretar el mandril que sostiene las herramientas de corte.</sub>
+</p>
+
+<hr />
+<h2 id="camas-de-sacrificio-y-recursos">Camas de sacrificio y recursos<a class="headerlink" href="#camas-de-sacrificio-y-recursos" title="Enlace permanente">&para;</a></h2>
+<ul>
+<li><strong>Camas de sacrificio:</strong> Es altamente recomendable utilizar nuestras propias camas de sacrificio (usualmente hechas de MDF o materiales similares) colocadas sobre la base de la máquina. Esto protege la estructura principal de la fresadora de posibles daños accidentales durante el fresado de contornos.</li>
+<li><strong>Descarga de Archivos:</strong> Puedes acceder al diseño base en formato DXF desde el siguiente enlace:<br />
+  <a href="../recursos/archivos/Sacrificio-SS.dxf" target="_blank">[Sacrificio SS (DXF)]</a></li>
+</ul>
+<hr />
+<h2 id="fabricacion-paso-a-paso">Fabricación paso a paso<a class="headerlink" href="#fabricacion-paso-a-paso" title="Enlace permanente">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Al cambiar de herramienta</p>
+<p><strong>Precaución Crítica en el Cambio de Herramienta:</strong> Procedemos a cambiar la broca por la siguiente herramienta (por ejemplo, el cortador en V para pistas) y <strong>volvemos a calibrar únicamente en el eje Z</strong>. Es <strong>sumamente importante no mover los ejes X y Y</strong>, ya que cualquier alteración en dichos ejes provocará que las pistas o perforaciones posteriores queden totalmente desfasadas.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:4"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Paso 1 · Fijar</label><label for="__tabbed_3_2">Paso 2 · Broca</label><label for="__tabbed_3_3">Paso 3 · Calibrar</label><label for="__tabbed_3_4">Paso 4 · Ejecutar</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li><strong>Preparación de la Superficie:</strong> Limpiamos la cama de sacrificio y utilizamos <strong>cinta doble cara</strong> para fijar nuestra placa de cobre, procurando pegarla lo más derecha y alineada posible para evitar errores de paralelismo.</li>
+</ol>
+<p><p align="center">
+  <img src="../recursos/imgs/monofab-placa-fenolica-cinta-doble-cara.jpeg" alt="Placa fenólica con cinta doble cara" width="800"><br>
+  <sub>Figura: Placa fenólica con cinta doble cara.</sub>
+</p></p>
+<p><p align="center">
+  <img src="../recursos/imgs/monofab-placa-alineada-mesa.jpeg" alt="Placa alineada" width="800"><br>
+  <sub>Figura: Placa fenólica alineada correctamente en la cama de sacrificio.</sub>
+</p></p>
+<p><p align="center">
+  <img src="../recursos/imgs/monofab-cama-sacrificio-maquina.jpeg" alt="Placa con cama de sacrificio dentro de la MonoFab" width="800"><br>
+  <sub>Figura: Placa con cama de sacrificio colocada dentro de la MonoFab.</sub>
+</p></p>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Colocación de la Broca:</strong> Usando la herramienta de la llave Allen, aflojamos el tornillo y colocamos la broca o cortador; posteriormente volvemos a apretar para continuar con la calibración.</li>
+</ol>
+<p><p align="center">
+  <img src="../recursos/imgs/monofab-colocacion-fresa.jpeg" alt="Colocación del cortador" width="800"><br>
+  <sub>Figura: Colocación del cortador.</sub>
+</p></p>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>
+<p><strong>Calibración de Ejes X e Y:</strong> Movemos la máquina mediante el VPanel hasta la esquina inferior izquierda de la placa de cobre y guardamos el origen en X e Y (<code>X/Y</code> en <em>Set Origin Point</em>).</p>
+</li>
+<li>
+<p><strong>Calibración del Eje Z:</strong> Para el eje Z, utilizamos la técnica clásica de colocar un <strong>pequeño trozo de papel</strong> entre la punta de la herramienta y la superficie de la placa, bajando lentamente el eje Z hasta sentir una ligera fricción al mover el papel. Una vez logrado, fijamos el origen en Z.</p>
+</li>
+</ol>
+<p><p align="center">
+  <img src="../recursos/imgs/monofab-calibracion-origen.jpeg" alt="Calibración en la esquina inferior izquierda" width="800"><br>
+  <sub>Figura: Calibración de la MonoFab en la esquina inferior izquierda.</sub>
+</p></p>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>
+<p><strong>Ejecución del Trabajo:</strong> Con los orígenes correctamente fijados, subimos nuestro archivo de perforaciones (<code>.rml</code>), verificamos la vista previa y presionamos <em>Output</em> para iniciar el proceso.</p>
+</li>
+<li>
+<p><strong>Inspección y Cambio de Herramienta:</strong> Una vez finalizado el trabajo de perforación, acercamos la placa hacia nosotros utilizando el VPanel para poder aspirar los residuos y revisar el resultado.</p>
+</li>
+</ol>
+<p><p align="center">
+  <img src="../recursos/imgs/monofab-placa-perforada-limpieza.jpeg" alt="Placa perforada lista para aspirar" width="800"><br>
+  <sub>Figura: Placa fenólica perforada lista para aspirar residuos.</sub>
+</p></p>
+</div>
+</div>
+</div>
+<h2 id="evidencia-en-video">Evidencia en video<a class="headerlink" href="#evidencia-en-video" title="Enlace permanente">&para;</a></h2>
+<p>A continuación se muestran los registros en video del comportamiento de la Roland MonoFab SRM-20 en cada una de sus fases operativas:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Perforaciones</label><label for="__tabbed_4_2">Pistas</label><label for="__tabbed_4_3">Contorno</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><strong>Proceso de Perforaciones:</strong>
+  <video controls width="100%">
+    <source src="../recursos/imgs/monofab-perforado-placa.mp4" type="video/mp4">
+    Tu navegador no soporta la reproducción de video.
+  </video>
+  <sub>Proceso automatizado de perforación de la placa de cobre utilizando la broca de 0.8 mm.</sub></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><strong>Proceso de Trazado de Pistas:</strong>
+  <video controls width="100%">
+    <source src="../recursos/imgs/monofab-fresado-pistas.mp4" type="video/mp4">
+    Tu navegador no soporta la reproducción de video.
+  </video>
+  <sub>Mecanizado y aislamiento de las pistas del circuito con el cortador en V de 0.4 mm.</sub></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><strong>Proceso de Contorno:</strong>
+  <video controls width="100%">
+    <source src="../recursos/imgs/monofab-fresado-contorno.mp4" type="video/mp4">
+    Tu navegador no soporta la reproducción de video.
+  </video>
+  <sub>Corte final de contorno de la placa utilizando la herramienta de 2 mm.</sub></li>
+</ul>
+</div>
+</div>
+</div>
+<h2 id="seguridad-y-operacion">Seguridad y operación<a class="headerlink" href="#seguridad-y-operacion" title="Enlace permanente">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Pautas de operación y supervisión</p>
+<p><strong>Nota:</strong> Se recomienda tener en cuenta las siguientes pautas operativas durante el uso del equipo:</p>
+<ul>
+<li><strong>Prevención de suspensión de energía:</strong> Se recomienda que durante cualquier proceso de trabajo se mantenga reproduciendo un video en segundo plano o activo en el equipo de cómputo para evitar que la computadora entre en modo de suspensión o ahorro de energía, lo cual podría interrumpir o apagar la comunicación con el equipo durante un corte o grabado crítico.</li>
+<li><strong>Respaldo energético:</strong> Se recomienda contar con una fuente de alimentación ininterrumpida (UPS / pila) o un contacto cercano de respaldo para mantener energizado el equipo y evitar cortes abruptos por fallas en la red eléctrica.</li>
+<li><strong>Monitoreo inicial:</strong> Es vital mantenernos al pendiente en los primeros segundos de cada proceso de mecanizado; una supervisión oportuna en el arranque nos permite reaccionar a tiempo para evitar colisiones, corregir errores de configuración de origen o ajustar parámetros de fabricación antes de dañar el material.</li>
+</ul>
+</div>
+<h2 id="placas-fabricadas">Placas fabricadas<a class="headerlink" href="#placas-fabricadas" title="Enlace permanente">&para;</a></h2>
+<div class="media-grid">
+<p>A continuación se muestra el resultado final del trabajo realizado por el equipo:</p>
+<p align="center">
+  <img src="../recursos/imgs/monofab-galeria-placa-fabricada-01.jpeg" alt="Primera placa fabricada" width="500"><br>
+  <sub>Vista general de la primera PCB fabricada.</sub>
+</p>
+<p align="center">
+  <img src="../recursos/imgs/monofab-galeria-placa-fabricada-02.jpeg" alt="Segunda placa fabricada" width="500"><br>
+  <sub>Vista general de la segunda PCB fabricada.</sub>
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../Mods%20CE/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Preparación CAM">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Preparación CAM
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Doc%20Multisim/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Simulación">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Simulación
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "toc.integrate", "navigation.top", "navigation.footer", "content.code.copy", "content.tooltips"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+    
+  </body>
+</html>
