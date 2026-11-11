@@ -61,7 +61,9 @@ extra_css:
 
 nav:
   - Inicio: index.md
-  - Diseño de PCB: Primeros pasos Kicad.md
+  - Diseño de PCB:
+    - KiCad: Primeros pasos Kicad.md
+    - Altium Designer: Altium Designer.md
   - Preparación CAM: Mods CE.md
   - Fabricación CNC: Roland MonoFab.md
   - Simulación: Doc Multisim.md
