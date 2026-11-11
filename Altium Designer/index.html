@@ -1,0 +1,1301 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Portafolio de diseño, simulación y fabricación electrónica">
+      
+      
+      
+        <link rel="canonical" href="https://gerardo-esquivel.github.io/prod-electronica/Altium%20Designer/">
+      
+      
+        <link rel="prev" href="../Primeros%20pasos%20Kicad/">
+      
+      
+        <link rel="next" href="../Mods%20CE/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Altium Designer - Producción Electrónica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#diseno-de-circuitos-y-pcb-con-altium-designer" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Producción Electrónica" class="md-header__button md-logo" aria-label="Producción Electrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 4h12v1h3v2h-3v2h3v2h-3v2h3v2h-3v2h3v2h-3v1H6v-1H3v-2h3v-2H3v-2h3v-2H3V9h3V7H3V5h3zm5 11v3h1v-3zm2 0v3h1v-3zm2 0v3h1v-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Producción Electrónica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Altium Designer
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Primeros%20pasos%20Kicad/" class="md-tabs__link">
+          
+  
+  
+  Diseño de PCB
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Mods%20CE/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Preparación CAM
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Roland%20MonoFab/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Fabricación CNC
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Doc%20Multisim/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Simulación
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Equipo%20de%20trabajo/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Equipo
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Producción Electrónica" class="md-nav__button md-logo" aria-label="Producción Electrónica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 4h12v1h3v2h-3v2h3v2h-3v2h3v2h-3v2h3v2h-3v1H6v-1H3v-2h3v-2H3v-2h3v-2H3V9h3V7H3V5h3zm5 11v3h1v-3zm2 0v3h1v-3zm2 0v3h1v-3z"/></svg>
+
+    </a>
+    Producción Electrónica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diseño de PCB
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Diseño de PCB
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Primeros%20pasos%20Kicad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KiCad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Altium Designer
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Altium Designer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#datos-de-la-placa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Datos de la placa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-y-entorno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instalación y entorno
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proyecto-y-documentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proyecto y documentos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliotecas-y-componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bibliotecas y componentes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editor-de-esquemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editor de esquemas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validacion-electrica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validación eléctrica
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transferencia-a-la-pcb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transferencia a la PCB
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparacion-de-la-placa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preparación de la placa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diseno-y-ruteo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diseño y ruteo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perforaciones-y-planos-de-cobre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perforaciones y planos de cobre
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verificacion-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verificación final
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivos-de-fabricacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Archivos de fabricación
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mods%20CE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Preparación CAM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Roland%20MonoFab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fabricación CNC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Doc%20Multisim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Equipo%20de%20trabajo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="diseno-de-circuitos-y-pcb-con-altium-designer">Diseño de circuitos y PCB con Altium Designer<a class="headerlink" href="#diseno-de-circuitos-y-pcb-con-altium-designer" title="Enlace permanente">&para;</a></h1>
+<p>En esta práctica diseñamos la tarjeta <strong>Reloj de mesa</strong> en Altium Designer. La placa sirve como módulo de expansión para un microcontrolador. Integra un sensor de temperatura, tres pulsadores y un zumbador. El controlador recibe la temperatura por I²C y el estado de los pulsadores, y acciona la alerta sonora con la señal <code>BUZZER_EN</code>.</p>
+<hr />
+<details class="abstract">
+<summary>Explorar esta guía</summary>
+<ul>
+<li><a href="#datos-de-la-placa">Datos de la placa</a></li>
+<li><a href="#instalacion-y-entorno">Instalación y entorno</a></li>
+<li><a href="#proyecto-y-documentos">Proyecto y documentos</a></li>
+<li><a href="#bibliotecas-y-componentes">Bibliotecas y componentes</a></li>
+<li><a href="#editor-de-esquemas">Editor de esquemas</a></li>
+<li><a href="#validacion-electrica">Validación eléctrica</a></li>
+<li><a href="#transferencia-a-la-pcb">Transferencia a la PCB</a></li>
+<li><a href="#preparacion-de-la-placa">Preparación de la placa</a></li>
+<li><a href="#diseno-y-ruteo">Diseño y ruteo</a></li>
+<li><a href="#perforaciones-y-planos-de-cobre">Perforaciones y planos de cobre</a></li>
+<li><a href="#verificacion-final">Verificación final</a></li>
+<li><a href="#archivos-de-fabricacion">Archivos de fabricación</a></li>
+</ul>
+</details>
+<h2 id="datos-de-la-placa">Datos de la placa<a class="headerlink" href="#datos-de-la-placa" title="Enlace permanente">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Dato</th>
+<th>Diseño documentado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Práctica</td>
+<td>Reloj de mesa</td>
+</tr>
+<tr>
+<td>Proyecto</td>
+<td><code>Proyecto_Final.PrjPcb</code></td>
+</tr>
+<tr>
+<td>Esquema y placa</td>
+<td><code>Proyecto_Final.SchDoc</code> y <code>Proyecto_Final.PcbDoc</code></td>
+</tr>
+<tr>
+<td>Versión</td>
+<td>Altium Designer 26.11.1, compilación 5</td>
+</tr>
+<tr>
+<td>Alimentación</td>
+<td><code>+3V3</code> desde el controlador conectado a J2/J3</td>
+</tr>
+<tr>
+<td>Contorno guardado</td>
+<td>Rectangular, <strong>77.216 × 65.913 mm</strong> (ancho × alto)</td>
+</tr>
+<tr>
+<td>Capas de señal</td>
+<td><strong>Top Layer</strong> y <strong>Bottom Layer</strong>, con ruteo en ambas</td>
+</tr>
+<tr>
+<td>Estado de la evidencia</td>
+<td>Diseño y DRC documentados. Salida NC Drill disponible.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="instalacion-y-entorno">Instalación y entorno<a class="headerlink" href="#instalacion-y-entorno" title="Enlace permanente">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Acceso al programa</label><label for="__tabbed_1_2">Reconocer la interfaz</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Para reproducir la práctica, utiliza la instalación oficial de Altium Designer y activa la licencia desde <strong>License Management</strong>. En <strong>Help → About</strong> puedes comprobar la versión y el número de compilación. El equipo trabajó con la licencia académica de la Universidad Iberoamericana Puebla.</p>
+<p><a href="https://www.altium.com/documentation/altium-designer/installation-management/installing">Instalación y administración de Altium Designer</a> · <a href="https://www.altium.com/documentation/altium-designer/installation-management/licensing">Gestión de licencias</a></p>
+</div>
+<div class="tabbed-block">
+<p><strong>Projects</strong> permite cambiar entre el esquema y la PCB del mismo proyecto. <strong>Properties</strong> muestra los ajustes del objeto seleccionado. En la parte inferior del editor de PCB, las pestañas de capas permiten identificar la capa activa y distinguir el cobre de la serigrafía y las capas mecánicas.</p>
+<p><img src="../recursos/imgs/altium/10-entorno-pcb.png" alt="Editor de Altium con Projects a la izquierda y la PCB ruteada a la derecha" width="800" loading="lazy"></p>
+</div>
+</div>
+</div>
+<h2 id="proyecto-y-documentos">Proyecto y documentos<a class="headerlink" href="#proyecto-y-documentos" title="Enlace permanente">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Crear el proyecto</label><label for="__tabbed_2_2">Organización de la práctica</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>Abrir <strong>File → New → Project</strong> y elegir un proyecto de PCB.</li>
+<li>Asignar un nombre y elegir su ubicación local o el Workspace del equipo.</li>
+<li>Agregar el esquema <code>.SchDoc</code> y la PCB <code>.PcbDoc</code>. Para archivos que ya existen, utilizar <strong>Add Existing to Project</strong>.</li>
+<li>Guardar los documentos y comprobar que aparecen en <strong>Source Documents</strong> bajo el mismo <code>.PrjPcb</code>.</li>
+</ol>
+<p><a href="https://www.altium.com/documentation/altium-designer/creating-projects-documents">Creación de proyectos y documentos</a></p>
+</div>
+<div class="tabbed-block">
+<p>El panel <strong>Projects</strong> muestra <code>Proyecto_Final.PrjPcb</code> en el Workspace de la Universidad Iberoamericana Puebla. El esquema y la PCB están bajo <strong>Source Documents</strong>, junto a <code>CAMtastic1.Cam</code> y <code>CAMtastic3.Cam</code>. La carpeta <strong>Libraries</strong> agrupa las bibliotecas asociadas y <strong>Generated</strong> reúne las referencias a salidas del proyecto.</p>
+<p><img src="../recursos/imgs/altium/02-proyecto-documentos.png" alt="Árbol de Proyecto_Final con el esquema, la PCB y dos documentos CAMtastic" width="600" loading="lazy"></p>
+</div>
+</div>
+</div>
+<h2 id="bibliotecas-y-componentes">Bibliotecas y componentes<a class="headerlink" href="#bibliotecas-y-componentes" title="Enlace permanente">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Origen y huella</label><label for="__tabbed_3_2">Lista de componentes</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>Abrir <strong>Components</strong> y localizar la pieza en la biblioteca disponible.</li>
+<li>Colocar el símbolo y seleccionarlo en el esquema para consultar <strong>Properties</strong>.</li>
+<li>Revisar <strong>Designator</strong>, <strong>Comment</strong> y <strong>Source</strong>. En <strong>Footprints</strong>, comprobar que el encapsulado y los pads correspondan al componente.</li>
+</ol>
+<p>En el caso de <code>U1</code>, <strong>Source</strong> muestra el Workspace de la Universidad Iberoamericana Puebla. El sensor <code>MCP9808-E/MS</code> utiliza la huella <code>MCHP-MSOP-MS8_M</code>, con ocho terminales y paso de 0.65 mm. En el esquema guardado, <code>J2</code> y <code>J3</code> usan el símbolo <code>DS1023-1x15SF11_LOCAL</code> de <code>Conectores_Reloj.SchLib</code>.</p>
+<p><img src="../recursos/imgs/altium/03-biblioteca-componente.png" alt="Propiedades de U1 con designador, modelo MCP9808-E/MS, fuente institucional y huella" width="740" loading="lazy"></p>
+<p><img src="../recursos/imgs/altium/03-biblioteca-componente2.png" alt="Vista previa de los ocho pads de la huella MCHP-MSOP-MS8_M de U1" width="600" loading="lazy"></p>
+<p><a href="https://www.altium.com/documentation/altium-designer/schematic/components-file-based-database-libraries">Disponibilidad de bibliotecas en Altium</a></p>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Referencia</th>
+<th>Componente o valor</th>
+<th>Función en la placa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>U1</td>
+<td><code>MCP9808-E/MS</code></td>
+<td>Sensor digital de temperatura</td>
+</tr>
+<tr>
+<td>J1</td>
+<td><code>TSW-104-07-G-S</code></td>
+<td>Conector auxiliar de alimentación e I²C</td>
+</tr>
+<tr>
+<td>J2, J3</td>
+<td><code>DS1023-1x15SF11</code></td>
+<td>Dos conectores de 15 pines para el controlador</td>
+</tr>
+<tr>
+<td>SW1, SW2, SW3</td>
+<td><code>B3F-1000</code></td>
+<td>Pulsadores de menú, avance y confirmación</td>
+</tr>
+<tr>
+<td>R1</td>
+<td><code>RC1206FR-07680RL</code>, 680 Ω</td>
+<td>Resistencia de base de Q1</td>
+</tr>
+<tr>
+<td>R2, R3</td>
+<td>4.7 kΩ, 1 %, 1206, 250 mW</td>
+<td>Resistencias de polarización de <code>SDA</code> y <code>SCL</code></td>
+</tr>
+<tr>
+<td>R4</td>
+<td>100 kΩ, 1 %, 1206, 250 mW</td>
+<td>Polarización de la base de Q1 hacia tierra</td>
+</tr>
+<tr>
+<td>C1</td>
+<td><code>CL31B104KBCNNNC</code>, 100 nF</td>
+<td>Desacoplo de alimentación</td>
+</tr>
+<tr>
+<td>C2</td>
+<td>10 µF, 10 %, 16 V, 1206</td>
+<td>Desacoplo de alimentación</td>
+</tr>
+<tr>
+<td>LS1</td>
+<td><code>KXG1203C</code></td>
+<td>Zumbador</td>
+</tr>
+<tr>
+<td>D1</td>
+<td><code>SS12</code></td>
+<td>Diodo en paralelo con el zumbador</td>
+</tr>
+<tr>
+<td>Q1</td>
+<td><code>MMBT3904LT1G</code></td>
+<td>Transistor de conmutación del zumbador</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<h2 id="editor-de-esquemas">Editor de esquemas<a class="headerlink" href="#editor-de-esquemas" title="Enlace permanente">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Vista general</label><label for="__tabbed_4_2">Conectar y etiquetar</label><label for="__tabbed_4_3">Asignación de conectores</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>El esquema se organiza en cuatro bloques. El <strong>sensor MCP9808</strong> comunica sus lecturas por <code>SDA</code> y <code>SCL</code>, con resistencias de 4.7 kΩ hacia <code>+3V3</code>. <strong>C1 y C2</strong> están entre <code>+3V3</code> y <code>GND</code>. Los <strong>pulsadores</strong> cierran su señal a <code>GND</code> al presionarlos. El <strong>zumbador</strong> se conecta a <code>+3V3</code> y Q1 conmuta su retorno a tierra cuando el controlador activa <code>BUZZER_EN</code>.</p>
+<p><img src="../recursos/imgs/altium/04-esquema-completo.png" alt="Esquema completo con sensor MCP9808, conectores, tres pulsadores y etapa del zumbador" width="800" loading="lazy"></p>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Colocar los símbolos y comprobar que cada uno tenga un designador único.</li>
+<li>Usar <strong>Place → Wire</strong> para conectar pines y colocar <strong>Place → Net Label</strong> sobre los cables que requieran un nombre.</li>
+<li>Reutilizar las etiquetas en los puntos de la hoja que deban pertenecer a la misma red. Revisar que la etiqueta esté anclada al cable.</li>
+<li>Verificar las uniones y las señales en los conectores antes de actualizar la PCB.</li>
+</ol>
+<p>En el esquema completo, <code>SDA</code> y <code>SCL</code> se pueden seguir desde U1 hasta J1 y J2 por sus etiquetas. Los nombres <code>BTN_MENU</code>, <code>BTN_UP</code> y <code>BTN_OK</code> vinculan J2 con SW1, SW2 y SW3. El estado de reposo de las entradas depende de la polarización que use el controlador.</p>
+<p><a href="https://www.altium.com/documentation/altium-designer/schematic/creating-circuit-connectivity">Cables y etiquetas de red</a></p>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Conector</th>
+<th>Pines visibles en el esquema</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>J1</td>
+<td>01 <code>GND</code>, 02 <code>+3V3</code>, 03 <code>SCL</code>, 04 <code>SDA</code></td>
+<td>Expansión auxiliar</td>
+</tr>
+<tr>
+<td>J2</td>
+<td>02 <code>+3V3</code>, 04 <code>BTN_MENU</code>, 05 <code>BTN_UP</code>, 06 <code>BTN_OK</code>, 08 <code>SDA</code>, 09 <code>SCL</code>, 14 <code>GND</code></td>
+<td>Alimentación, pulsadores y bus I²C</td>
+</tr>
+<tr>
+<td>J3</td>
+<td>08 <code>BUZZER_EN</code>, 12 <code>GND</code></td>
+<td>Control del zumbador y retorno</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<h2 id="validacion-electrica">Validación eléctrica<a class="headerlink" href="#validacion-electrica" title="Enlace permanente">&para;</a></h2>
+<ol>
+<li>En el panel <strong>Projects</strong>, seleccionar el proyecto y ejecutar <strong>Validate PCB Project</strong>.</li>
+<li>Abrir <strong>Messages</strong> y revisar cada entrada asociada al esquema.</li>
+<li>Para la advertencia de <code>SCL</code>, revisar el tipo eléctrico de los pines implicados y cómo se representa el controlador externo en el circuito.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Resultado de la validación del esquema</p>
+<p>El panel <strong>Messages</strong> informa una compilación con <strong>cero errores</strong> y muestra <strong>una advertencia</strong> para <code>SCL</code>. Altium indica que la red carece de una fuente que la maneje. El esquema lleva <code>SCL</code> a J2-09 y a U1. Queda por confirmar el manejo del reloj desde el controlador y la causa de la advertencia en la configuración eléctrica.</p>
+</div>
+<p><img src="../recursos/imgs/altium/08-validacion-resultado.png" alt="Panel Messages con la advertencia Net SCL has no driving source y compilación sin errores" width="800" loading="lazy"></p>
+<p><a href="https://www.altium.com/documentation/altium-designer/schematic/design-validation">Validación eléctrica del proyecto</a></p>
+<h2 id="transferencia-a-la-pcb">Transferencia a la PCB<a class="headerlink" href="#transferencia-a-la-pcb" title="Enlace permanente">&para;</a></h2>
+<ol>
+<li>Guardar el <code>.SchDoc</code> y el <code>.PcbDoc</code> dentro del proyecto.</li>
+<li>Con el esquema activo, abrir <strong>Design → Update PCB Document</strong> si se necesita sincronizar cambios.</li>
+<li>Cuando aparezca una <strong>Engineering Change Order (ECO)</strong>, revisar huellas, componentes y redes. Usar <strong>Validate Changes</strong> y luego <strong>Execute Changes</strong> para aplicar los cambios revisados.</li>
+<li>Comprobar en la PCB que los designadores coincidan con el esquema y que las redes estén asignadas a sus pads.</li>
+</ol>
+<p>La sincronización mediante ECO queda como referencia para futuras revisiones. La evidencia de esta práctica muestra los documentos asociados y la distribución final de la PCB. <a href="https://www.altium.com/documentation/altium-designer/sch-pcb">Sincronización entre esquema y PCB</a></p>
+<h2 id="preparacion-de-la-placa">Preparación de la placa<a class="headerlink" href="#preparacion-de-la-placa" title="Enlace permanente">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Capas</label><label for="__tabbed_5_2">Contorno y medidas</label><label for="__tabbed_5_3">Distribución de componentes</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Abrir <strong>Design → Layer Stack Manager</strong> y revisar <strong>Stackup</strong>. La configuración del proyecto tiene dos capas de señal de cobre de <strong>1 oz</strong>, cada una con <strong>0.03556 mm</strong> de espesor. Entre ellas aparece <code>Dielectric 1</code>, con material FR-4 y <strong>0.32004 mm</strong> configurados. <code>Top Solder</code> y <code>Bottom Solder</code> corresponden a las máscaras de soldadura. <code>Top Overlay</code> y <code>Bottom Overlay</code> son capas de serigrafía.</p>
+<p><img src="../recursos/imgs/altium/11-capas-pcb.png" alt="Stackup de dos capas de cobre de 1 oz, dieléctrico FR-4, máscaras y serigrafía" width="800" loading="lazy"></p>
+<p><a href="https://www.altium.com/documentation/altium-designer/pcb/defining-layer-stack">Configuración de capas</a></p>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Definir el contorno físico con <strong>Board Shape</strong>. Verificar que el perímetro sea cerrado.</li>
+<li>En 2D, abrir <strong>Reports → Measure Distance</strong> (<code>Ctrl+M</code>). Medir el ancho y el alto con los puntos ajustados a los vértices del contorno.</li>
+<li>Registrar la componente <strong>X Distance</strong> para el ancho y <strong>Y Distance</strong> para el alto. Para una medición horizontal o vertical, verificar que el desplazamiento en el otro eje sea cero.</li>
+</ol>
+<p>El contorno rectangular guardado en <code>Proyecto_Final.PcbDoc</code> abarca <strong>3040 × 2595 mil</strong>, equivalentes a <strong>77.216 × 65.913 mm</strong>. Las capturas muestran una lectura horizontal de <strong>77.216 mm</strong> con un desplazamiento vertical de <strong>0.127 mm</strong> y una lectura vertical de <strong>65.659 mm</strong>. La lectura vertical corresponde a los puntos seleccionados en la captura. Para especificar la placa se toman los vértices del contorno guardado.</p>
+<p><img src="../recursos/imgs/altium/12a-contorno-ancho.png" alt="Medición con componente horizontal de 77.216 mm y vertical de 0.127 mm" width="800" loading="lazy"></p>
+<p><img src="../recursos/imgs/altium/12b-contorno-alto.png" alt="Medición entre los puntos elegidos con componente vertical de 65.659 mm" width="800" loading="lazy"></p>
+<p><a href="https://www.altium.com/documentation/altium-designer/pcb/defining-board-shape">Definir el contorno</a> · <a href="https://www.altium.com/documentation/altium-designer/pcb/measuring-distances">Medir distancias</a></p>
+</div>
+<div class="tabbed-block">
+<p>J2 y J3 ocupan dos filas paralelas en la zona central. El sensor U1 queda hacia el borde superior y el zumbador LS1 hacia la derecha, junto a su etapa de control. Los pulsadores se alinean debajo de J2 y J1 queda cerca del borde inferior. Esta distribución permite identificar cada bloque del esquema en el diseño físico.</p>
+</div>
+</div>
+</div>
+<h2 id="diseno-y-ruteo">Diseño y ruteo<a class="headerlink" href="#diseno-y-ruteo" title="Enlace permanente">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Reglas de diseño</label><label for="__tabbed_6_2">Trazado de pistas</label><label for="__tabbed_6_3">Identificación en serigrafía</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Con la PCB activa, abrir <strong>Design → Rules</strong>. En <strong>Routing → Width</strong>, comprobar el alcance y los límites por capa. La regla <code>Width</code> de esta placa muestra <strong>0.089 mm</strong> de mínimo, <strong>0.381 mm</strong> como valor preferido y <strong>2.54 mm</strong> de máximo en ambas capas de señal.</p>
+<p><img src="../recursos/imgs/altium/13a-regla-ancho.png" alt="Regla Width con mínimo 0.089 mm, preferido 0.381 mm y máximo 2.54 mm en ambas capas" width="800" loading="lazy"></p>
+<p>En <strong>Electrical → Clearance</strong>, la regla <code>Clearance Different Nets</code> muestra separaciones según los objetos. La matriz indica <strong>0.089 mm</strong> entre pistas y <strong>0.2 mm</strong> entre una pista y un pad pasante. El reporte DRC también lista restricciones de <strong>0.203 mm</strong> con alcance por capa. Para interpretar una separación se debe revisar qué regla aplica al par de objetos evaluado.</p>
+<p><img src="../recursos/imgs/altium/13b-regla-clearance.png" alt="Matriz Clearance Different Nets con separaciones por tipo de objeto en milímetros" width="800" loading="lazy"></p>
+<p><a href="https://www.altium.com/documentation/altium-designer/pcb/constraints-editor">Reglas en el editor de PCB</a></p>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Activar la capa de señal prevista e iniciar <strong>Route → Interactive Routing</strong>.</li>
+<li>Seleccionar un pad y llevar la pista hasta el destino de su red, respetando la separación y el ancho de la regla aplicable.</li>
+<li>Revisar en <strong>Properties</strong> la red, capa y ancho del segmento seleccionado. Comprobar los cambios de capa y las conexiones pendientes en el DRC.</li>
+</ol>
+<p>En la PCB ruteada, las pistas rojas corresponden a <strong>Top Layer</strong> y las azules a <strong>Bottom Layer</strong>. La pista seleccionada en el segundo ejemplo pertenece a <code>+3V3</code>, está en <strong>Top Layer</strong> y mide <strong>0.381 mm</strong> de ancho y <strong>12.393 mm</strong> de largo en ese segmento.</p>
+<p><img src="../recursos/imgs/altium/14-pcb-ruteada.png" alt="Vista 2D de la PCB ruteada con pistas en Top Layer y Bottom Layer" width="800" loading="lazy"></p>
+<p><img src="../recursos/imgs/altium/15-pista-propiedades.png" alt="Propiedades de un segmento de la red +3V3 con ancho de 0.381 mm en Top Layer" width="800" loading="lazy"></p>
+<p><a href="https://www.altium.com/documentation/altium-designer/pcb/routing/interactive">Ruteo interactivo</a></p>
+</div>
+<div class="tabbed-block">
+<p>Seleccionar un designador y revisar su posición, tamaño y capa en <strong>Properties</strong>. En el ejemplo, <code>J2</code> está en <strong>Top Overlay</strong> con una altura de <strong>1.524 mm</strong> y un grosor de trazo de <strong>0.254 mm</strong>. Colocar las referencias cerca de sus componentes para que la serigrafía permita identificarlos durante el montaje.</p>
+<p><img src="../recursos/imgs/altium/16-texto-placa.png" alt="Designador J2 seleccionado en Top Overlay con altura de texto de 1.524 mm" width="800" loading="lazy"></p>
+</div>
+</div>
+</div>
+<h2 id="perforaciones-y-planos-de-cobre">Perforaciones y planos de cobre<a class="headerlink" href="#perforaciones-y-planos-de-cobre" title="Enlace permanente">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Perforaciones</label><label for="__tabbed_7_2">Planos de cobre</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Para revisar una perforación, seleccionar el pad o la vía en el editor y consultar su diámetro de agujero en <strong>Properties</strong>. El reporte <code>Proyecto_Final.DRR</code> agrupa las herramientas de la salida <strong>NC Drill</strong> entre <strong>Top Layer</strong> y <strong>Bottom Layer</strong>. Registra <strong>50 perforaciones redondas metalizadas</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Herramienta</th>
+<th>Diámetro</th>
+<th>Cantidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T01</td>
+<td>0.500 mm</td>
+<td>2</td>
+</tr>
+<tr>
+<td>T02</td>
+<td>0.900 mm</td>
+<td>2</td>
+</tr>
+<tr>
+<td>T03</td>
+<td>1.020 mm</td>
+<td>34</td>
+</tr>
+<tr>
+<td>T04</td>
+<td>1.200 mm</td>
+<td>12</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://www.altium.com/documentation/altium-designer/pcb/understanding-connectivity">Propiedades de pads y agujeros</a></p>
+</div>
+<div class="tabbed-block">
+<p>La PCB guardada contiene tres polígonos sólidos de <code>GND</code> en <strong>Top Layer</strong>. Se distinguen como regiones rojas alrededor del sensor, el zumbador y la zona de los pulsadores en la vista ruteada.</p>
+<p>Para reproducir esta etapa, colocar un <strong>Polygon Pour</strong>, seleccionar la capa y asignar la red <code>GND</code> en <strong>Properties</strong>. Después de editar las pistas, usar <strong>Repour</strong> para recalcular el relleno y revisar sus conexiones y separaciones antes del DRC. <a href="https://www.altium.com/documentation/altium-designer/pcb/signal-layer-polygons">Polígonos en capas de señal</a></p>
+</div>
+</div>
+</div>
+<h2 id="verificacion-final">Verificación final<a class="headerlink" href="#verificacion-final" title="Enlace permanente">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Resultado del DRC</label><label for="__tabbed_8_2">Inspección 3D</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>Guardar la PCB con los rellenos actualizados.</li>
+<li>Abrir <strong>Tools → Design Rule Check</strong>, seleccionar las comprobaciones y activar la generación del reporte.</li>
+<li>Ejecutar la revisión y comprobar las entradas del resumen.</li>
+</ol>
+<p>El reporte de <code>Proyecto_Final.PcbDoc</code> del <strong>10 de noviembre de 2026</strong> registra <strong>0 advertencias y 0 violaciones</strong> en las reglas ejecutadas. El archivo de reporte incluye comprobaciones de aislamiento, cortocircuitos, conexiones sin rutear y anchos de pista.</p>
+<p><img src="../recursos/imgs/altium/19-drc-reporte.png" alt="Reporte de verificación de reglas de Proyecto_Final con cero advertencias y cero violaciones" width="800" loading="lazy"></p>
+<p><a href="https://www.altium.com/documentation/altium-designer/tutorial/verifying-board-design">Comprobación DRC</a></p>
+</div>
+<div class="tabbed-block">
+<p>Con el <code>.PcbDoc</code> activo, presionar <code>3</code> para abrir la vista 3D. Revisar el contorno, la orientación, la posición de los pulsadores y el acceso a los conectores. La captura muestra los tres pulsadores y varios componentes SMD con sus modelos. Las posiciones de J1, J2, J3 y LS1 se identifican por sus huellas y marcas de serigrafía.</p>
+<p><img src="../recursos/imgs/altium/20-pcb-final-3d.png" alt="Vista 3D del reloj de mesa con tres pulsadores, componentes SMD y huellas de conectores y zumbador" width="800" loading="lazy"></p>
+<p><a href="https://www.altium.com/documentation/altium-designer/pcb/3d-view">Vista 3D de la placa</a></p>
+</div>
+</div>
+</div>
+<h2 id="archivos-de-fabricacion">Archivos de fabricación<a class="headerlink" href="#archivos-de-fabricacion" title="Enlace permanente">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Salidas del proyecto</label><label for="__tabbed_9_2">Revisión en CAM</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Desde el <code>.PcbDoc</code>, <strong>File → Fabrication Outputs → Gerber Files</strong> permite seleccionar las capas de cobre y el perfil de la placa. <strong>NC Drill Files</strong> genera el archivo de perforaciones. Para verificar las salidas, abrirlas en un visor CAM y superponer el cobre superior, el inferior, el perfil y los agujeros. <a href="https://www.altium.com/documentation/altium-designer/preparing-for-manufacture/output-jobs/fabrication-data">Preparación de datos de fabricación</a></p>
+<table>
+<thead>
+<tr>
+<th>Evidencia disponible</th>
+<th>Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Proyecto_Final-Plated.TXT</code></td>
+<td>Salida NC Drill métrica con formato 4:4 y cuatro herramientas para agujeros metalizados.</td>
+</tr>
+<tr>
+<td><code>Proyecto_Final.DRR</code></td>
+<td>Reporte de diámetros y cantidades del taladrado.</td>
+</tr>
+<tr>
+<td><code>CAMtastic1.Cam</code> y <code>CAMtastic3.Cam</code></td>
+<td>Documentos CAM del proyecto. Entre sus referencias aparecen <code>Proyecto_Final.GTL</code>, <code>Proyecto_Final.GBL</code>, <code>Proyecto_Final.GM</code> y <code>Proyecto_Final-Plated.TXT</code>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<p>Para cerrar esta etapa queda por reunir el juego Gerber de la revisión final y comprobar visualmente la coincidencia entre cobre, perfil y perforaciones. Se debe confirmar el método de fabricación de esta placa. Si se emplea la fresadora con Mods, se documentará también el formato de entrada, la conversión utilizada y la comprobación de escala en el programa.</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../Primeros%20pasos%20Kicad/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: KiCad">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                KiCad
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Mods%20CE/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Preparación CAM">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Preparación CAM
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "toc.integrate", "navigation.top", "navigation.footer", "content.code.copy", "content.tooltips"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>
